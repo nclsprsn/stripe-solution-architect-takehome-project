@@ -6,8 +6,58 @@
     </h1>
   </div>
   <div class="mt-40 text-center">
-    <div class="mt-20 text-center text-secondary border-placeholder">
+    <div id="message" class="mt-20 text-center text-secondary border-placeholder">
       Add details about the payment here!
     </div>
   </div>
 </main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', async () => {
+    const stripe = Stripe('{{ stripe_publisable_key }}');
+
+    // Retrieve the "payment_intent_client_secret" query parameter appended to
+    // your return_url by Stripe.js
+    const url = new URL(window.location);
+    const clientSecret = url.searchParams.get('payment_intent_client_secret');
+
+    // Retrieve the PaymentIntent
+    const { error, paymentIntent } = await stripe.retrievePaymentIntent(
+      clientSecret
+    );
+
+    const message = document.querySelector('#message')
+
+    if (error) {
+      message.innerText = error.message;
+    } else {
+      // Inspect the PaymentIntent `status` to indicate the status of the payment
+      // to your customer.
+      //
+      // Some payment methods will [immediately succeed or fail][0] upon
+      // confirmation, while others will first enter a `processing` state.
+      //
+      // [0]: https://stripe.com/docs/payments/payment-methods#payment-notification
+      switch (paymentIntent.status) {
+        case 'succeeded':
+          message.innerText = "Success! Payment received";
+          message.innerHTML += `<br>Payment ${paymentIntent.status}: ${paymentIntent.id}<br>Total due: ${(paymentIntent.amount / 100).toFixed(2)} ${paymentIntent.currency}`;
+          break;
+
+        case 'processing':
+          message.innerText = "Payment processing. We'll update you when payment is received.";
+          break;
+
+        case 'requires_payment_method':
+          message.innerText = 'Payment failed. Please try another payment method.';
+          // Redirect your user back to your payment page to attempt collecting
+          // payment again
+          break;
+
+        default:
+          message.innerText = 'Something went wrong.';
+          break;
+      }
+    }
+  });
+</script>

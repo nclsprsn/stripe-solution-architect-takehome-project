@@ -21,7 +21,10 @@ git clone https://github.com/nclsprsn/sa-takehome-project-node && cd sa-takehome
 npm install
 ```
 
-Rename `sample.env` to `.env` and populate with your Stripe account's test API keys
+Rename `sample.env` to `.env` and populate with your Stripe account's test API keys.
+
+- [API Keys](https://docs.stripe.com/keys) (secret_key and publishable_key)
+- [Setup the webhook](https://docs.stripe.com/webhooks) (webhook_secret)
 
 Then run the application locally:
 
@@ -30,3 +33,13 @@ npm start
 ```
 
 Navigate to [http://localhost:3000](http://localhost:3000) to view the index page.
+
+## The payment process
+
+![Payment process](docs/payment_process.png)
+
+## Ressources
+
+The ressources used in this project :
+
+- [Accept a Payment](https://docs.stripe.com/payments/accept-a-payment?platform=web&ui=elements#web-post-payment)

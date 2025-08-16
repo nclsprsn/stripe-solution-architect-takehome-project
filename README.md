@@ -17,7 +17,7 @@ To simplify this project, we're also not using any database here, either. Instea
 To get started, clone the repository and run `npm install` to install dependencies:
 
 ```
-git clone https://github.com/nclsprsn/sa-takehome-project-node && cd sa-takehome-project-node
+git clone https://github.com/nclsprsn/stripe-solution-architect-takehome-project && cd sa-takehome-project-node
 npm install
 ```
 
@@ -37,6 +37,8 @@ Navigate to [http://localhost:3000](http://localhost:3000) to view the index pag
 ## The payment process
 
 ![Payment process](docs/payment_process.png)
+
+[Link to the diagram](https://mermaid.live/edit#pako:eNqtVMtu2zAQ_JUtTw6g2MhVaFPAjlvkUNSIfCoEGDS1llhTpMqHUzfIv3dJSbGdpLf6Ykkczu7MPp6YMBWynDn8FVALvJO8trwtNdCv49ZLITuuPSyAO1gE502L9u3xPB0rifQ8-WKN9qirq7e4IuKWvzuLzkGB9oAWJnMu9v-AryO-8FZ2WOr-fHF9ezvPYzCxh5KtghUNd1gyMBoaSq_jNcLEoULhobOmCsIP3HO6W-TwdbmGmWhQ7E3wn6XH9tNNDygiYE3sXClYfaf4s8PNrOPHlpS5jYy6vANvQFjkHoHDqj-8T0cft_Z2wlsTtM9ABGvJ1GMGPHizGVg2LfrGVG5IqVhf90k9oA9WX9LBRCRPNw4p3qiiuO4teCDTyL9RCCThj9I3o2qo0HOpHHBdwQVTzHMI6BsElxzedGGrpONbhZs9HqNKqaWXnD5iwvWVmP50Jzspj_sB9OcMkEImH0ZFsFQY_y-quCSZ1sFgzUW-LmxbSV7vjG3PqjcWp095KozeSduOMZL6VwHfqj93npJYWSNiP45ZRLzFStrYQGTCzAWRAL23Qxn7Xti8Q3zeZcPVdws30sa6_b-CRIeIyUo84Ktucp774OAg-WifHYAXuFf2vNuYPdUp6iKHO-k6xY8vNtKMB0UtjNN6mtGkFr3cDy_1IX9RHrAq2WkWknMF-UNu47YxZg-U3ljZkbqPnoaNPCEJdR39pGtS11Q_MDZNRt8c3EtaDdhSa0ULjybQ0bDKskiiTF3Hi8l5rpBcpsGuuOdb2iwZscWItJYiObhGdl18fDR2v1Pm8YpljKiIv6JV-hS1lIy4WlpKOT1WuOPkRMlK_UzQuAyKoxYs9zZgxqwJdcPyHVcUi4WO4o57-OUrbcMfxpzeqTu9sd_65Z12-PNfEq4DqA)
 
 ## Ressources
 
